@@ -11,3 +11,9 @@ let ans2=()=>{
     console.log("this is another function 3")
 }
 console.log(ans2())
+// by default bhiuwan will be passed
+
+function defaul(name="bhuwan"){
+    console.log(`${name}`)
+}
+defaul()
