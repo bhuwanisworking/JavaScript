@@ -8,9 +8,11 @@ btn.addEventListener("click",function(){
     
 })
 let speed=0;
-setInterval(function(){
+let intervalid=setInterval(function(){
     speed++;
     console.log(speed)
-    if(speed==30) return
+    if(speed==30){
+        clearInterval(intervalid)
+    }
 
 },1000)
