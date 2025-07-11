@@ -1,15 +1,20 @@
-let em=document.querySelector("#inp1");
-let pw=document.querySelector("#inp2");
-let btn=document.querySelector("button")
+document.getElementById('myForm').addEventListener('submit', function (event) {
+  event.preventDefault();
 
-console.log(em)
-console.log(pw)
-console.log(btn)
-em.addEventListener('click',function(event){
-    console.log(event.target.value)
-})
-pw.addEventListener('click',function(event){
-    console.log(event.target.value)
-})
+  const email = document.getElementById('inp1').value.trim();
+  const password = document.getElementById('inp2').value.trim();
 
+  const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
+  if (!emailPattern.test(email)) {
+    alert("❌ Please enter a valid email address.");
+    return;
+  }
+
+  if (password.length < 6) {
+    alert("❌ Password must be at least 6 characters long.");
+    return;
+  }
+
+  alert("✅ Form submitted successfully!");
+});
