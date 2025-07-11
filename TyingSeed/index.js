@@ -8,8 +8,9 @@ btn.addEventListener("click",function(){
     
 })
 let speed=0;
-setTimeout(function(){
+setInterval(function(){
     speed++;
     console.log(speed)
+    if(speed==30) return
 
 },1000)
